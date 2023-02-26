@@ -4,7 +4,7 @@ Theme Name: Design Hoo
 Version:	1.0.0
 Author:		Alex Jonathan
 */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 :root {
   --bs-gray-100: #fefefe;
   --bs-gray-200: #f6f7f9;
@@ -137,7 +137,7 @@ Author:		Alex Jonathan
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 96, 105, 123;
   --bs-body-bg-rgb: 254, 254, 254;
-  --bs-font-sans-serif: "Manrope", sans-serif;
+  --bs-font-sans-serif: "Poppins", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-root-font-size: 20px;
