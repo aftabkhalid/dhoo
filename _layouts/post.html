@@ -1,0 +1,27 @@
+---
+layout: portfolio
+---
+
+<div class="section-ak pt" data-scroll-section>
+  <div class="container">
+    <div class="row justify-content-center"">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-7 col-xl-7 col-xxl-7">
+        <div class="post">
+          <h1>{{ page.title }}</h1>
+
+          <!-- <span>{% if page.categories %} • <a href="{{ site.tags.CATEGORY }}"> {{ page.categories }} </a> {% endif %}</span> -->
+
+          <div class="stamp d-flex">
+            <figure class="author-avatar">
+              <img src="https://1.gravatar.com/userimage/11227337/85544ef2447ae14b349dd6a0343097fd?s=100&r=pg&d=mp" alt="Aftab Khalid" class="avatar">
+            </figure>
+            <time datetime="{{ page.date | date: "%b %-d, %Y" }}"></time>
+            <p>by {% if page.author %}{{ page.author }}{% endif %} • {{ page.date | date: "%b %-d, %Y" }}</p>
+          </div>
+
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

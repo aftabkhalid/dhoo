@@ -1,0 +1,20 @@
+- url: /
+  title: Home
+
+- url: /about
+  title: About
+
+# - url: /services
+#   title: Services
+
+- url: /work
+  title: Work
+
+- url: /audit-request
+  title: Audit Request
+
+- url: /blog
+  title: Blog
+
+- url: /contact
+  title: Contact
