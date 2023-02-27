@@ -145,7 +145,7 @@ Author:		Alex Jonathan
   --bs-body-font-size: 0.8rem;
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.7;
-  --bs-body-color: #60697b;
+  --bs-body-color: #000; /* 60697b */
   --bs-body-bg: #fefefe;
   --bs-border-width: 1px;
   --bs-border-style: solid;
