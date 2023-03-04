@@ -35,7 +35,6 @@ var path = {
 
 /* Include gulp and plugins */
 var gulp = require('gulp'),
-    webserver = require('browser-sync'),
     reload = webserver.reload,
     plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -45,9 +44,6 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     cache = require('gulp-cache'),
-    imagemin = require('gulp-imagemin'),
-    jpegrecompress = require('imagemin-jpeg-recompress'),
-    pngquant = require('imagemin-pngquant'),
     del = require('del'),
     fileinclude = require('gulp-file-include'),
     beautify = require('gulp-beautify'),
@@ -61,7 +57,7 @@ var gulp = require('gulp'),
 /* Server */
 var config = {
     server: {
-        baseDir: './dist'
+        baseDir: '/'
     },
     ghostMode: false, // By setting true, clicks, scrolls and form inputs on any device will be mirrored to all others
     notify: false
