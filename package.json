@@ -6,17 +6,13 @@
     "author": "Aftab Khalid",
     "private": true,
     "scripts": {
-      "start": "gulp serve",
-      "build": "gulp build:dist"
+      "scss": "gulp sass"
     },
     "devDependencies": {
-        "autoprefixer": "^9.7.0",
-        "cssnano": "^4.1.10",
         "gulp": "^4.0.2",
-        "gulp-flatten": "^0.4.0",
-        "gulp-postcss": "^8.0.0",
-        "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.6.5",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^5.1.0",
+        "node-sass": "^8.0.0",
         "bootstrap": "^5.2.2"
       }
   }
