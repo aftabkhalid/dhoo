@@ -6,7 +6,6 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     sourcemaps = require("gulp-sourcemaps");
-    browserSync = require("browser-sync").create();
 
 //Paths
 var paths = {
@@ -38,38 +37,9 @@ function style() {
       .pipe(postcss([autoprefixer(), cssnano()]))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.sass.dest))
-      // Add browsersync stream pipe after compilation
-      .pipe(browserSync.stream())
   );
 }
 
 //
 
-// A simple task to reload the page
-function browsersyncReload(cb){
-  browsersync.reload();
-  cb();
-}
-
-function watch() {
-  browserSync.init({
-    server: {
-      baseDir: "/",
-    }
-  });
-  gulp.watch("src/sass/**/*.scss", style);
-  gulp.watch('/*.html').on('change', browserSync.reload)
-}
-
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "/"
-        }
-    });
-});
-
 exports.style = style;
-exports.watch = watch;
-exports.copy = copyFiles(arr);
