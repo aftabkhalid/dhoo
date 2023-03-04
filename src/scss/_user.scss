@@ -1,1 +1,12 @@
 // Use this to write your custom SCSS
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+.bg {
+    background-image: linear-gradient(180deg, rgba(255,255,255, 0.01),
+    rgba(240,240,248,1) 85%),radial-gradient(ellipse at top left,
+    rgba(13,110,253, 0.5), transparent 50%),radial-gradient(ellipse at top right, 
+    rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, 
+    rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, 
+    rgba(214,51,132, 0.5), transparent 50%);
+}
