@@ -54,21 +54,9 @@ var gulp = require('gulp'),
     replace = require('gulp-replace'),
     touch = require('gulp-touch-cmd');
     
-/* Server */
-var config = {
-    server: {
-        baseDir: '/'
-    },
-    ghostMode: false, // By setting true, clicks, scrolls and form inputs on any device will be mirrored to all others
-    notify: false
-};
+
 
 /* Tasks */
-
-// Start the server
-gulp.task('webserver', function () {
-    webserver(config);
-});
 
 // Compile theme styles
 gulp.task('css:dist', function () {
