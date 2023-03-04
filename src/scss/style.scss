@@ -36,6 +36,13 @@ Author:		Alex Marxell
 @import "theme/theme";
 
 // User custom styles
-@import 'user';
+@import '../css/vendor/animate.css';
+@import '../css/vendor/glightbox.css';
+@import '../css/vendor/plyr.css';
+@import '../css/vendor/prism.css';
+@import '../css/vendor/scrollcue.css';
+@import '../css/vendor/swiper-bundle.min.css';
+
 @import 'colors/grape.scss';
 @import 'fonts/space.scss';
+@import 'user';
