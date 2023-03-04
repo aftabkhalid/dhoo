@@ -32,10 +32,7 @@ Author:		Alex Marxell
 // Bootstrap layout & components
 @import "bootstrap";
 
-// Theme layout & components
-@import "theme/theme";
-
-// User custom styles
+// CSS Vendors
 @import '../css/vendor/animate.css';
 @import '../css/vendor/glightbox.css';
 @import '../css/vendor/plyr.css';
@@ -43,6 +40,10 @@ Author:		Alex Marxell
 @import '../css/vendor/scrollcue.css';
 @import '../css/vendor/swiper-bundle.min.css';
 
+// Theme layout & components
+@import "theme/theme";
+
+// User custom styles
 @import 'colors/grape.scss';
 @import 'fonts/space.scss';
 @import 'user';
