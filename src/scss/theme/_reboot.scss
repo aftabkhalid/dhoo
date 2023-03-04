@@ -640,13 +640,13 @@ figure img {
     -webkit-mask-size: auto auto;
   }
   &.mask-1 img {
-    mask-image: url(../../assets/img/svg/blob.svg);
+    mask-image: url(../../../images/svg/blob.svg);
   }
   &.mask-2 img {
-    mask-image: url(../../assets/img/svg/hex.svg);
+    mask-image: url(../../../images//svg/hex.svg);
   }
   &.mask-3 img {
-    mask-image: url(../../assets/img/svg/blob2.svg);
+    mask-image: url(../../../images/svg/blob2.svg);
   }
 }
 //----------------------------------------------------------//
