@@ -27,11 +27,15 @@ var paths = {
     dest: "dist"
   },
   plugin: {
-    src: "src/css/vendor/*.css",
+    src: 'src/css/vendor/*.css',
     dest: "dist"
   },
   colors: {
     src: "src/scss/colors/grape.scss",
+    dest: "dist"
+  },
+  swiper: {
+    src: "src/swiper-bundle.min.css",
     dest: "dist"
   }
 };
@@ -50,12 +54,19 @@ gulp.task('colors', () => {
     .pipe(gulp.dest('dist'));
 });
 
-function pluginTask() {
+gulp.task('swiper', () => {
+  return gulp.src([paths.swiper.src])
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('plugin', () => {
   return gulp.src([paths.plugin.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
     .pipe(concat('plugin.css'))
     .pipe(gulp.dest('dist'))
-}
+});
 
-gulp.task('default', gulp.series(['styles'], [pluginTask], ['colors']));
+gulp.task('default', gulp.series(['styles'],['plugin'],['colors'],['swiper']));
