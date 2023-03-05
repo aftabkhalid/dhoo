@@ -819,8 +819,8 @@ iframe.wait-autoplay {
     top: 45%
   }
 }
-/*
-@media (min-width:992px) {
+
+/* @media (min-width:992px) {
   .glightbox-clean .gclose {
     opacity: .7;
     right: 20px
@@ -830,4 +830,4 @@ iframe.wait-autoplay {
   .goverlay {
     background: #000
   }
-}
+} */

@@ -32,18 +32,9 @@ Author:		Alex Marxell
 // Bootstrap layout & components
 @import "bootstrap";
 
-// CSS Vendors
-@import '../css/vendor/animate.css';
-@import '../css/vendor/glightbox.css';
-@import '../css/vendor/plyr.css';
-@import '../css/vendor/prism.css';
-@import '../css/vendor/scrollcue.css';
-@import '../css/vendor/swiper-bundle.min.css';
-
 // Theme layout & components
 @import "theme/theme";
 
 // User custom styles
-@import 'colors/grape.scss';
 @import 'fonts/space.scss';
 @import 'user';
