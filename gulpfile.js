@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
+var clean = require('gulp-clean');
 
 // gulp.task('styles', () => {
 //   return gulp.src('src/scss/style.scss')
@@ -24,41 +25,45 @@ const concat = require('gulp-concat');
 var paths = {
   sass: {
     src: "src/scss/style.scss",
-    dest: "dist"
   },
   plugin: {
     src: 'src/css/vendor/*.css',
-    dest: "dist"
   },
   colors: {
     src: "src/scss/colors/grape.scss",
-    dest: "dist"
   },
   swiper: {
-    src: "src/swiper-bundle.min.css",
-    dest: "dist"
+    src: "src/css/swiper-bundle.min.css",
+    dest: "dist/css"
+  },
+  clean: {
+    dist: 'dist/css/*',
   }
 };
+
+gulp.task('clean', () => {
+  return gulp.src([paths.clean.dist])
+});
 
 gulp.task('styles', () => {
   return gulp.src([paths.sass.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('colors', () => {
   return gulp.src([paths.colors.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('swiper', () => {
   return gulp.src([paths.swiper.src])
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('plugin', () => {
@@ -66,7 +71,7 @@ gulp.task('plugin', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
     .pipe(concat('plugin.css'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('default', gulp.series(['styles'],['plugin'],['colors'],['swiper']));
