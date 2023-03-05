@@ -5,6 +5,8 @@ const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const clean = require('gulp-clean');
+//const clean = require('del');
+
 
 // Paths
 var paths = {
@@ -20,17 +22,15 @@ var paths = {
   swiper: {
     src: "src/css/swiper-bundle.min.css",
     //dest: "dist/css"
-  },
-  clean: {
-    dist: 'dist/css/*',
   }
 };
 
 // Clean dist folder
 gulp.task('clean', function () {
-  return gulp.src('dist/css/*.*.css', {read: true})
+  return gulp.src('dist/css', {read: false})
     .pipe(clean());
 });
+
 
 // Compile sass & css
 gulp.task('styles', () => {
@@ -63,4 +63,4 @@ gulp.task('plugin', () => {
 });
 //
 
-gulp.task('default', gulp.series(['styles'],['plugin'],['colors'],['swiper']));
+gulp.task('default', gulp.series(['clean'],['styles'],['plugin'],['colors'],['swiper']));
