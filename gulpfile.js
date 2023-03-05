@@ -4,24 +4,9 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
-var clean = require('gulp-clean');
+const clean = require('gulp-clean');
 
-// gulp.task('styles', () => {
-//   return gulp.src('src/scss/style.scss')
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(cssnano())
-//     .pipe(gulp.dest('dist'));
-// });
-
-// gulp.task('styles', () => {
-//   return gulp.src([paths.sass.src, paths.plugin.src])
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(cssnano())
-//     .pipe(gulp.dest('dist'));
-// });
-
-// gulp.task('default', gulp.series(['styles']));
-
+// Paths
 var paths = {
   sass: {
     src: "src/scss/style.scss",
@@ -34,17 +19,20 @@ var paths = {
   },
   swiper: {
     src: "src/css/swiper-bundle.min.css",
-    dest: "dist/css"
+    //dest: "dist/css"
   },
   clean: {
     dist: 'dist/css/*',
   }
 };
 
-gulp.task('clean', () => {
-  return gulp.src([paths.clean.dist])
+// Clean dist folder
+gulp.task('clean', function () {
+  return gulp.src('dist/css/*.*.css', {read: true})
+    .pipe(clean());
 });
 
+// Compile sass & css
 gulp.task('styles', () => {
   return gulp.src([paths.sass.src])
     .pipe(sass().on('error', sass.logError))
@@ -71,7 +59,8 @@ gulp.task('plugin', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
     .pipe(concat('plugin.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css'));
 });
+//
 
 gulp.task('default', gulp.series(['styles'],['plugin'],['colors'],['swiper']));
