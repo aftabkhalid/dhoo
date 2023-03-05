@@ -302,7 +302,7 @@ $mark-padding: 0.05rem 0.4rem 0.2rem !default;
 //----------------------------------------------------------//
 //	TYPOGRAPHY
 //----------------------------------------------------------//
-$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700' !default;
+$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap' !default;
 $font-family-sans-serif: "Manrope", sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-custom-icons: "Custom" !default;
@@ -341,7 +341,7 @@ $h4-line-height: 1.45 !default;
 $h5-line-height: 1.5 !default;
 $h6-line-height: 1.55 !default;
 $headings-font-weight: 700 !default;
-$headings-color: $main-dark !default;
+$headings-color: $black !default;
 $display-font-sizes: (1: 2.4rem,
   2: 2.2rem,
   3: 2rem,
