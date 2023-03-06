@@ -24,8 +24,7 @@ var paths = {
     //dest: "dist/css"
   },
   animate: {
-    src: "src/css/swiper-bundle.min.css",
-    //dest: "dist/css"
+    src: "src/css/animate.css",
   }
 };
 
