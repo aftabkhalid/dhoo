@@ -316,7 +316,7 @@ $font-weight-light: 400 !default;
 $font-weight-normal: 500 !default;
 $font-weight-medium: 500 !default;
 $font-weight-bold: 700 !default;
-$font-weight-bolder: 800 !default;
+$font-weight-bolder: bolder !default;
 $font-weight-base: $font-weight-normal !default;
 $letter-spacing-xs: -0.035em !default;
 $letter-spacing-sm: -0.03em !default;
@@ -340,7 +340,7 @@ $h3-line-height: 1.4 !default;
 $h4-line-height: 1.45 !default;
 $h5-line-height: 1.5 !default;
 $h6-line-height: 1.55 !default;
-$headings-font-weight: 700 !default;
+$headings-font-weight: 800 !default;
 $headings-color: $black !default;
 $display-font-sizes: (1: 2.4rem,
   2: 2.2rem,
