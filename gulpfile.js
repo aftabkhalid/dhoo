@@ -22,6 +22,10 @@ var paths = {
   swiper: {
     src: "src/css/swiper-bundle.min.css",
     //dest: "dist/css"
+  },
+  animate: {
+    src: "src/css/swiper-bundle.min.css",
+    //dest: "dist/css"
   }
 };
 
@@ -30,7 +34,6 @@ gulp.task('clean', function () {
   return gulp.src('dist/css', {read: false})
     .pipe(clean());
 });
-
 
 // Compile sass & css
 gulp.task('styles', () => {
@@ -54,6 +57,13 @@ gulp.task('swiper', () => {
     .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('animate', () => {
+  return gulp.src([paths.animate.src])
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist/css'));
+});
+
 gulp.task('plugin', () => {
   return gulp.src([paths.plugin.src])
     .pipe(sass().on('error', sass.logError))
@@ -63,4 +73,4 @@ gulp.task('plugin', () => {
 });
 //
 
-gulp.task('default', gulp.series(['clean'],['styles'],['plugin'],['colors'],['swiper']));
+gulp.task('default', gulp.series(['clean'],['styles'],['plugin'],['colors'],['swiper'],['animate']));
